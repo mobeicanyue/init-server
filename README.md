@@ -1,14 +1,7 @@
-一个帮助你初始化服务器时区和安全设置的脚本，在使用之前，请修改脚本中的 `TIME_ZONE` 和 `SSH_PORT` 变量。目前仅支持 Debian 和 Ubuntu 系统。在初始化完成后，服务器
-- 时区会被设置为 `TIME_ZONE` 变量指定的值
-- SSH 端口会被修改
-- 禁 ping
-- 安装启用 ufw, Fail2ban
+## 脚本说明 Script Description
+本脚本可以帮助你快速部署服务器，包括设置时区、安装 Web 服务器（默认为 caddy）、SSH 安全配置、防火墙配置、禁用 ping、配置 Fail2ban 等等。在使用前请最好先阅读脚本内容，以免造成不必要的损失。你可以根据自己的需求修改脚本内容。目前支持 Debian 12, Ubuntu 22.04
 
-A script to help you initialize the server time zone and security settings. Before using it, please modify the `TIME_ZONE` and `SSH_PORT` variables in the script. Currently only supports Debian and Ubuntu systems. After initialization, the server
-- The time zone will be set to the value specified by the `TIME_ZONE` variable
-- The SSH port will be changed
-- Disable ping
-- Install and enable ufw, Fail2ban
+This script can help you quickly deploy the server, including setting the time zone, installing the Web server (default is caddy), SSH security configuration, firewall configuration, disabling ping, configuring Fail2ban, etc. Before using, it is best to read the script content first to avoid unnecessary losses. You can modify the script content according to your needs.
 
 ## 使用方法 Usage
 ```bash
@@ -20,6 +13,9 @@ sudo bash init-server.sh
 wget https://cdn.jsdelivr.net/gh/mobeicanyue/init-server/init-server.sh
 sudo bash init-server.sh
 ```
+
+## 问题反馈 Feedback
+如果你在使用过程中遇到问题，可以在 GitHub 上提 issue，或者在我的博客留言。我看到会尽可能回复。
 
 ## 参考文章 Reference
 具体操作与说明请参考我的博客：[从零开始部署服务器和网站](https://blog.ovvv.top/posts/4cde56ee/)

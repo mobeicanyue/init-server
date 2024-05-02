@@ -28,6 +28,10 @@ sudo apt install systemd-timesyncd -y
 echo -e "${GREEN}\n输出当前时区\n${NC}"
 timedatectl
 
+echo -e "${YELLOW}\n安装 Web 服务器\n${NC}"
+# sudo apt install nginx -y
+sudo apt install caddy -y
+
 echo -e "${PURPLE}\n修改 SSH 端口\n${NC}"
 sudo sed -i "s/#Port 22/Port $SSH_PORT/" /etc/ssh/sshd_config
 grep -w 'Port' /etc/ssh/sshd_config
